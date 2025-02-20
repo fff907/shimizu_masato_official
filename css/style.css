@@ -1,0 +1,392 @@
+@charset "UTF-8";
+
+/* SP版コーディング
+------------------------------------------------------------*/
+
+/* ベースのスタイル
+------------------------------------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "biz-udpmincho", sans-serif;
+  font-style: normal;
+  font-size: .9375rem;
+  /* 15px */
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  background: linear-gradient(180deg,
+  #14090d,
+  #130d1e,
+  #121030,
+  #121139,
+  #11124a,
+  #111255);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+@media (max-width: 768px) {
+  .new-line {
+    display: none;
+  }
+
+  .cover video {
+    display: none;
+  }
+}
+
+/* 共通のスタイル
+------------------------------------------------------------*/
+
+/* タイトル */
+.section-heading {
+  text-align: center;
+}
+
+.section-title {
+  color: #fff;
+  margin: 6.25rem 0 3.125rem 0;
+  font-size: 2.625rem;
+  font-weight: 700;
+  line-height: 3.5;
+  text-align: center;
+}
+
+/* コンテナ */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.item-description {
+  font-size: 1rem;
+  margin: 1.875rem auto 2.1875rem auto;
+}
+
+.iframe-wrap {
+  margin: 3.125rem auto;
+  text-align: center;
+}
+
+/* ヘッダー
+------------------------------------------------------------*/
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header a {
+  color: #fff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  height: 3.75rem;
+  padding: 0 0 0 1.25rem;
+  /* ロゴ部分全体の左に20px */
+  box-sizing: border-box;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.05rem;
+  text-shadow: 1px -1px #333;
+}
+
+/* ハンバーガーメニューボタン */
+.hamburger-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  font-size: 1.75rem;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 1px -1px #333;
+}
+
+/* SPナビゲーション */
+.sp-nav {
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  height: 25.625rem;
+  display: none;
+  z-index: 1000;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #2b2b2b;
+  box-sizing: border-box;
+}
+
+.sp-nav-list li {
+  margin: 3.4375rem 0;
+}
+
+/* PCナビゲーション */
+.pc-nav {
+  display: none;
+}
+
+.pc-nav-list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pc-nav-list li {
+  margin: 0 0 0 3.125rem;
+  /* 左に50px */
+  text-shadow: 1px -1px #333;
+}
+
+/* カバー
+------------------------------------------------------------*/
+
+.cover {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+  height: 100vh;
+  color: #fff;
+  background-image: url(../images/cover_bg.png);
+  background-size: cover;
+  background-position: 18%;
+  overflow: hidden;
+}
+
+/* メイン
+------------------------------------------------------------*/
+
+.discography-item,
+.biography-item {
+  margin-bottom: 5rem;
+}
+
+.disco-artist-title {
+  font-size: 1.5rem;
+  margin: 0 auto 1.875rem auto;
+}
+
+.bio-artist-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0 auto 1.875rem auto;
+}
+
+.disco-artist-description  {
+  font-size: 1rem;
+  margin-bottom: 1.875rem;
+}
+
+.disco-item-title {
+  font-size: 1.5rem;
+  margin: 1.875rem 0 1.5625rem 0;
+  text-align: center;
+}
+
+.disco-item-release {
+  font-size: 1.25rem;
+  margin-bottom: 3.125rem;
+  text-align: end;
+}
+
+.facebook-wrap {
+  text-align: center;
+  margin-top: 3.125rem;
+}
+
+.contact-lead {
+  font-size: 1rem;
+  margin: 1.875rem .625rem 2.1875rem .625rem;
+}
+
+.contact-link {
+  text-decoration: underline;
+}
+
+/* フッター
+------------------------------------------------------------*/
+
+.footer {
+  padding: 2.5rem;
+  font-size: .875rem;
+  /* 14px */
+  text-align: center;
+  color: #fff;
+}
+
+/* min-width: 768px  PC版コーディング
+------------------------------------------------------------*/
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.125rem;
+    line-height: 2;
+  }
+
+  main {
+    margin: auto 6.25rem;
+  }
+
+  .section-title {
+    margin: 6.25rem 0;
+    font-size: 4.375rem;
+    text-align: start;
+    line-height: 2.5;
+  }
+
+  .header {
+    padding: 0 1.875rem;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+  .pc-nav {
+    display: block;
+  }
+
+  .disco-wrapper {
+    display: flex;
+    margin-bottom: 3.125rem;
+    position: relative;
+  }
+
+  .disco-wrapper-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .disco-artist-title {
+    font-size: 2.5rem;
+    margin: 0 auto 3.125rem auto;
+  }
+
+  .disco-artist-description:last-child {
+    margin-bottom: 5rem;
+  }
+
+  .jacket {
+    margin-bottom: 0;
+  }
+
+  .jacket-img {
+    width: 650px;
+    height: 600px;
+  }
+
+  .disco-item-name {
+    background: #6f7588;
+    padding: 1.25rem;
+    position: absolute;
+    top: 21px;
+    left: 513px;
+    opacity: 0.9;
+  }
+
+  .disco-item-name-reverse {
+    position: absolute;
+    top: 76px;
+    left: 167px;
+  }
+
+  .iframe-wrap {
+    margin: 0;
+    position: absolute;
+    top: 247px;
+    left: 682px;
+  }
+
+  .iframe-wrap-reverse {
+    margin: 0;
+    position: absolute;
+    top: 254px;
+    left: 67px;
+  }
+
+  .disco-item-title {
+    margin: 0;
+  }
+
+  .disco-item-release {
+    margin: 0;
+    text-align: center;
+  }
+
+  .bio-wrapper {
+    display: flex;
+    position: relative;
+    height: 470px;
+  }
+
+  .bio-wrapper-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .bio-artist-title {
+    font-size: 3.125rem;
+    position: absolute;
+    z-index: 2;
+    text-shadow: 1px -1px #333;
+  }
+
+  .biography img {
+    width: 765px;
+    height: 470px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  .bio-img-reverse {
+    left: 0;
+  }
+
+  .contact-flex {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .contact-lead {
+    margin-left: 4.375rem;
+  }
+}
