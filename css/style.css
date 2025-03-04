@@ -6,6 +6,10 @@
 /* ベースのスタイル
 ------------------------------------------------------------*/
 
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -14,7 +18,6 @@ body {
   font-family: "biz-udpmincho", sans-serif;
   font-style: normal;
   font-size: .9375rem;
-  /* 15px */
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1.5;
@@ -45,16 +48,11 @@ img {
   .new-line {
     display: none;
   }
-
-  .cover video {
-    display: none;
-  }
 }
 
 /* 共通のスタイル
 ------------------------------------------------------------*/
 
-/* タイトル */
 .section-heading {
   text-align: center;
 }
@@ -68,7 +66,6 @@ img {
   text-align: center;
 }
 
-/* コンテナ */
 .container {
   display: flex;
   flex-direction: column;
@@ -83,9 +80,15 @@ img {
   margin: 1.875rem auto 2.1875rem auto;
 }
 
-.iframe-wrap {
-  margin: 3.125rem auto;
-  text-align: center;
+.spotify {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.spotify iframe {
+  width: 100%;
+  max-width: 100%;
 }
 
 /* ヘッダー
@@ -109,7 +112,6 @@ img {
   z-index: 100;
   height: 3.75rem;
   padding: 0 0 0 1.25rem;
-  /* ロゴ部分全体の左に20px */
   box-sizing: border-box;
 }
 
@@ -121,7 +123,6 @@ img {
   text-shadow: 1px -1px #333;
 }
 
-/* ハンバーガーメニューボタン */
 .hamburger-button {
   display: flex;
   align-items: center;
@@ -134,7 +135,6 @@ img {
   text-shadow: 1px -1px #333;
 }
 
-/* SPナビゲーション */
 .sp-nav {
   position: absolute;
   top: 3.75rem;
@@ -153,7 +153,6 @@ img {
   margin: 3.4375rem 0;
 }
 
-/* PCナビゲーション */
 .pc-nav {
   display: none;
 }
@@ -169,7 +168,6 @@ img {
 
 .pc-nav-list li {
   margin: 0 0 0 3.125rem;
-  /* 左に50px */
   text-shadow: 1px -1px #333;
 }
 
@@ -177,6 +175,7 @@ img {
 ------------------------------------------------------------*/
 
 .cover {
+  position: relative;
   text-align: left;
   display: flex;
   align-items: center;
@@ -187,26 +186,62 @@ img {
   color: #fff;
   background-image: url(../images/cover_bg.png);
   background-size: cover;
-  background-position: 18%;
+  background-position: center;
   overflow: hidden;
+}
+
+.cover__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.cover__video {
+  display: none;
+}
+
+.cover {
+  background-position: left 18% center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* メイン
 ------------------------------------------------------------*/
 
 .discography-item,
-.biography-item {
+.biography-item,
+.contact-flex {
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.discography-item:first-child {
   margin-bottom: 5rem;
 }
 
 .disco-artist-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 0 auto 1.875rem auto;
 }
 
 .bio-artist-title {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 0 auto 1.875rem auto;
 }
 
@@ -225,6 +260,27 @@ img {
   font-size: 1.25rem;
   margin-bottom: 3.125rem;
   text-align: end;
+}
+
+.jacket-img,
+.bio-wrapper img {
+  width: 100%;  
+  height: auto;
+  object-fit: cover;
+}
+
+.iframe-wrap {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.youtube {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .facebook-wrap {
@@ -268,8 +324,14 @@ img {
   .section-title {
     margin: 6.25rem 0;
     font-size: 4.375rem;
-    text-align: start;
+    text-align: center;
     line-height: 2.5;
+  }
+
+  .item-description {
+    width: 100%;
+    max-width: 60%;
+    margin: 1.875rem auto 2.1875rem auto;
   }
 
   .header {
@@ -284,20 +346,25 @@ img {
     display: block;
   }
 
-  .disco-wrapper {
-    display: flex;
-    margin-bottom: 3.125rem;
-    position: relative;
-  }
-
+  .disco-wrapper,
   .disco-wrapper-reverse {
     display: flex;
-    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 100%;
+    margin: 2.5rem auto;
+    gap: 8rem;
   }
 
+  .discography-item {
+    max-width: 90%;
+    margin: 3rem auto;
+  }
+  
   .disco-artist-title {
     font-size: 2.5rem;
     margin: 0 auto 3.125rem auto;
+    text-align: center;
   }
 
   .disco-artist-description:last-child {
@@ -314,25 +381,26 @@ img {
   }
 
   .disco-item-name {
-    background: #6f7588;
-    padding: 1.25rem;
-    position: absolute;
-    top: 21px;
-    left: 513px;
-    opacity: 0.9;
+    font-size: 2.2rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px -1px #333;
+    margin-left: 40px;
   }
 
   .disco-item-name-reverse {
-    position: absolute;
-    top: 76px;
-    left: 167px;
+    font-size: 2.2rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px -1px #333;
+    margin-right: 40px;
   }
 
   .iframe-wrap {
     margin: 0;
     position: absolute;
     top: 247px;
-    left: 682px;
+    left: 328px;
   }
 
   .iframe-wrap-reverse {
@@ -353,27 +421,55 @@ img {
 
   .bio-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
     position: relative;
-    height: 470px;
   }
 
-  .bio-wrapper-reverse {
+  .bio-wrapper-reverse,
+  .disco-wrapper-reverse {
     display: flex;
     flex-direction: row-reverse;
   }
 
+  .biography-item,
+  .contact-item {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .biography-item {
+    margin-bottom: 5rem;
+  }
+  
   .bio-artist-title {
-    font-size: 3.125rem;
+    font-size: 2.2rem;
     position: absolute;
+    top: 0;
+    left: 575;
     z-index: 2;
     text-shadow: 1px -1px #333;
+    margin-bottom: 2rem;
+  }
+
+  .bio-artist-title-reverse {
+    font-size: 2.2rem;
+    position: absolute;
+    top: 0;
+    left: 1000;
+    z-index: 2;
+    text-shadow: 1px -1px #333;
+    margin-bottom: 2rem;
   }
 
   .biography img {
-    width: 765px;
-    height: 470px;
-    position: absolute;
-    right: 0;
+    width: 50%;
+    max-width: 900px;
+    height: auto;
+    object-fit: cover;
+    position: relative;
     z-index: 1;
   }
 
@@ -384,9 +480,13 @@ img {
   .contact-flex {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
   }
 
-  .contact-lead {
-    margin-left: 4.375rem;
+  .contact-paragraph {
+    text-align: left;
+    max-width: 500px;
   }
 }
