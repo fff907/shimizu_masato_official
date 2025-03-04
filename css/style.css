@@ -201,7 +201,7 @@ img {
   z-index: -1;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .cover__video {
     display: none;
   }
