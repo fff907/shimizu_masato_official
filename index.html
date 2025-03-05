@@ -1,420 +1,441 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shimizu Masato Official Site</title>
-    <meta name="description" content="清水雅人の公式サイトです。">
-    <!-- CSS -->
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Adobeフォント -->
-    <script>
-      (function(d) {
-        var config = {
-          kitId: 'jek6ulg',
-          scriptTimeout: 3000,
-          async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-      })(document);
-    </script>
-    <!-- リセットCSS -->
-    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/905f598671.js" crossorigin="anonymous"></script>
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="icon-192x192.png">
-    <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-180x180.png">
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/aos.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shimizu Masato Official Site</title>
+  <meta name="description" content="清水雅人の公式サイトです。">
+  <!-- CSS -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- Adobeフォント -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'jek6ulg',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () {h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";}, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () {a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try {Typekit.load(config)} catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/905f598671.js" crossorigin="anonymous"></script>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="icon-192x192.png">
+  <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-180x180.png">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/aos.css">
+</head>
 
-  <body>
-    <!-- ヘッダー -->
-    <header class="header">
-      <div class="header-inner">
-        <h1 class="header-logo">
-          <a href=".">SHIMIZU MASATO</a>
-        </h1>
-        <div class="hamburger-button"><i class="fas fa-bars" aria-label="menu"></i></div>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="header-logo">
+        <a href=".">SHIMIZU MASATO</a>
+      </h1>
+      <div class="hamburger-button"><i class="fas fa-bars" aria-label="menu"></i></div>
 
-        <!-- SPナビゲーション -->
-        <nav class="sp-nav">
-          <ul class="sp-nav-list">
-            <li><a href="#discography">DISCOGRAPHY</a></li>
-            <li><a href="#biography">BIOGRAPHY</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-        
-        <!-- PCナビゲーション -->
-        <nav class="pc-nav">
-          <ul class="pc-nav-list">
-            <li><a href="#discography">DISCOGRAPHY</a></li>
-            <li><a href="#biography">BIOGRAPHY</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
+      <!-- SPナビゲーション -->
+      <nav class="sp-nav">
+        <ul class="sp-nav-list">
+          <li><a href="#discography">DISCOGRAPHY</a></li>
+          <li><a href="#biography">BIOGRAPHY</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- PCナビゲーション -->
+      <nav class="pc-nav">
+        <ul class="pc-nav-list">
+          <li><a href="#discography">DISCOGRAPHY</a></li>
+          <li><a href="#biography">BIOGRAPHY</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- カバー -->
+  <section class="cover">
+    <video class="cover-video" src="images/shimizu_masato_live.mp4" autoplay loop muted playsinline></video>
+  </section>
+
+  <!-- メイン -->
+  <main>
+    <!-- ディスコグラフィ -->
+    <section class="discography" id="discography">
+      <div class="section-heading">
+        <h1 class="section-title">DISCOGRAPHY</h1>
       </div>
-    </header>
 
-    <!-- カバー -->
-    <section class="cover">
-      <video class="cover__video" src="images/shimizu_masato_live.mp4" autoplay loop muted playsinline></video>
+      <div class="container">
+        <div class="discography-item">
+          <h2 class="disco-artist-title">”清水雅人GROUP”名義</h2>
+          <div class="disco-artist-description">
+            <p class="disco-artist-description">
+              アルバムアートワークは大瀧詠一、角松敏生、松岡直也、熱帯JAZZ楽団 etc...<br class="new-line">数多くのジャケットを手がける "河田久雄氏"が担当。</p>
+            <p class="disco-artist-description">
+              テレビ・ラジオのCM音楽や都内のライブハウスで活躍する清水雅人(p)、杉田雅彦(g)、東千尋(ds)、瀬戸尚幸（el-b）が<br class="new-line">フュージョンミュージックの可能性を切り拓く!!
+            </p>
+          </div>
+
+          <div class="disco-wrapper">
+            <div class="jacket">
+              <div data-aos="zoom-out">
+                <a href="https://amzn.asia/d/08Zn4UEN"><img class="jacket-img jacket-img-pc" src="images/sincerely.jpg"
+                    alt="sincerely" width="800" height="800"></a>
+              </div>
+            </div>
+
+            <div class="disco-pc-design">
+              <div class="disco-item-name">
+                <h1 class="disco-item-title">1st Album"Sincerely"</h1>
+                <h1 class="disco-item-release">―2012.11.7 Released</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="spotify">
+            <iframe style="border-radius:12px"
+              src="https://open.spotify.com/embed/album/2sDs2aMcVWxtIjPZ0h7Axv?utm_source=generator" width="100%"
+              height="352" frameborder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+          </div>
+
+          <p class="item-description">
+            1. 夜のカフェ<br>
+            electric guitarの力強いストロークで始まるRock Tune!
+          </p>
+          <p class="item-description">
+            2. ハバナ・コネクション<br>
+            ハバナの長距離列車がキューバの熱い風を受けて疾走する!melodiousなel-bassソロに注目!
+          </p>
+          <p class="item-description">
+            3. Remember<br>
+            アメリカの田園風景と青い空…。爽やかなそよ風を感じて。
+          </p>
+          <p class="item-description">
+            4. 青い空の誘惑<br>
+            夏の青い空をイメージした夏全開の曲。リゾートの海の音、浜辺、椰子の木…。突き抜けるようなhandclapにも注目!
+          </p>
+          <p class="item-description">
+            5. Sincerely<br>
+            深夜11時…空いている高速道路から見渡す星のような都会の灯り…。アルバム唯一のジャズワルツ。オリジナル曲のなかで最も古い曲のひとつ。
+          </p>
+          <p class="item-description">
+            6. 約束<br>
+            ブルージーなジャズロック。emotionalなguitarと力強いpianoソロに注目。
+          </p>
+          <p class="item-description">
+            7. Find Out<br>
+            最後の曲はアコースティックなラテンフュージョン!終盤のドラムソロは圧巻!
+          </p>
+          <p class="item-description">
+            All Songs Composed and Produced<br>by Masato Shimizu.
+          </p>
+        </div>
+
+        <div class="discography-item">
+          <div class="disco-wrapper disco-wrapper-reverse">
+            <div class="jacket">
+              <div data-aos="zoom-out">
+                <a href="https://amzn.asia/d/0dCvsu1N"><img class="jacket-img jacket-img-pc" src="images/daydream.jpg"
+                    alt="daydream"></a>
+              </div>
+            </div>
+
+            <div class="disco-pc-design">
+              <div class="disco-item-name disco-item-name-reverse">
+                <h1 class="disco-item-title">2nd Album "Daydream"</h1>
+                <h1 class="disco-item-release">―2018.6.25 Released</h1>
+              </div>
+            </div>
+          </div>
+
+          <p class="item-description">
+            1. フィラデルフィア・フィーリング<br>
+            フィラデルフィア・ソウルに着想を得たポップ・フュージョン。
+          </p>
+          <p class="item-description">
+            2. めくるめく白昼夢<br>
+            P・K・ディックのSF小説の世界観を表現。霧雨の降る夜のスラム街、 アンドロイドを追うデッカード！圧巻のドラムソロをご堪能あれ。
+          </p>
+          <p class="item-description">
+            3. Never Say It<br>
+            1994年六本木Pit Inn 出演時に初演。何度となく演奏してきた思い出深い曲。<br>
+            Dedicatd to Mr. Yukio Kodaira.
+          </p>
+          <p class="item-description">
+            4. みずいろの街<br>
+            80年代のシティポップをイメージ。降りしきる雨の中、車はスピードを上げる･･･
+          </p>
+          <p class="item-description">
+            5. 9番目の真実<br>
+            ダンサブルなラテンフュージョン!
+          </p>
+          <p class="item-description">
+            6. 東京、午前3時<br>
+            夜の都会、寝静まったTOKYO CITY。
+          </p>
+          <p class="item-description">
+            7. Tropical Wind<br>
+            杉田・清水共作。杉田は沖縄三線、清水はアコーディオンで盛り上げる!<br>
+            夏全開!海、熱帯風を感じて･･･。
+          </p>
+          <p class="item-description">
+            8. Black-Neon<br>
+            元々アルゼンチンタンゴ×フリージャズの曲だったが、本作でフュージョンVer.にリアレンジ。
+          </p>
+          <p class="item-description">
+            9. 運命の1秒<br>
+            Electric Guitarを大フィーチャー!
+          </p>
+          <p class="item-description">
+            All Songs Composed and Produced<br>by Masato Shimizu.
+          </p>
+        </div>
+
+        <div class="discography-item">
+          <div class="disco-wrapper">
+            <div class="jacket">
+              <div data-aos="zoom-out">
+                <a
+                  href="https://amazon.co.jp/music/player/albums/B0B87H4MN6?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_B5tbNbULVkPcvwfyxmHYRFHgB"><img
+                    class="jacket-img" src="images/akinohi.jpg" alt="秋の日は釣瓶落とし"></a>
+              </div>
+            </div>
+
+            <div class="disco-pc-design">
+              <div class="disco-item-name">
+                <h1 class="disco-item-title">Digital single<br>"秋の日は釣瓶落とし"</h1>
+                <h1 class="disco-item-release">―2022.8.8 Released</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="spotify">
+            <iframe style="border-radius:12px"
+              src="https://open.spotify.com/embed/album/33ltMOIFtlEKWns4v3QLL4?utm_source=generator" width="100%"
+              height="352" frameborder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+          </div>
+
+          <p class="item-description">
+            待望の新曲! 作曲は、都内のジャズクラブやCM音楽で活躍するジャズピアニスト清水雅人! この曲で初めて、アコーディオンを使用し、秋の夕暮れの風景を表現した。
+          </p>
+        </div>
+
+        <div class="discography-item">
+          <h2 class="disco-artist-title">“清水雅人 & 杉田雅彦”名義</h2>
+
+          <div class="disco-wrapper disco-wrapper-reverse">
+            <div class="jacket">
+              <div data-aos="zoom-out">
+                <a
+                  href="https://amazon.co.jp/music/player/albums/B0D25R76MB?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_fERLusyltveDTsl25sXP7vzl5"><img
+                    class="jacket-img" src="images/star.jpg" alt="流星群"></a>
+              </div>
+            </div>
+
+            <div class="disco-pc-design">
+              <div class="disco-item-name disco-item-name-reverse">
+                <h1 class="disco-item-title">Digital single"流星群”</h1>
+                <h1 class="disco-item-release">―2024.4.27 Released.</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="spotify">
+            <iframe style="border-radius:12px"
+              src="https://open.spotify.com/embed/album/1CKzJomRdwGRfgCPLchMbM?utm_source=generator" width="100%"
+              height="352" frameborder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+          </div>
+
+          <p class="item-description">
+            名門・六本木ピットイン等に出演し、1990年代、ジャパニーズフュージョンシーンに躍り出た清水雅人(p)が、2024年、自身のグループとは別名義で活動を展開。盟友:杉田雅彦(g)と、新たなフュージョンの世界を展開する!
+          </p>
+        </div>
+
+        <div class="discography-item">
+          <h2 class="disco-artist-title">"For People's Fun"名義</h2>
+
+          <div class="disco-wrapper">
+            <div class="jacket">
+              <div data-aos="zoom-out">
+                <a href="https://amzn.asia/d/0cTj2GF8" alt="Gifts in the Life"><img class="jacket-img"
+                    src="images/gifts_in_the_life.jpg"></a>
+              </div>
+            </div>
+
+            <div class="disco-pc-design">
+              <div class="disco-item-name">
+                <h1 class="disco-item-title">1st Album<br>"Gifts in the Life"</h1>
+                <h1 class="disco-item-release">―2021.3.26 Released.</h1>
+              </div>
+            </div>
+          </div>
+
+          <p class="item-description">
+            清水雅人(piano,keyboard)、三浦大(guitar)の2人で贈る、カフェミュージックの「For People's
+            Fun」のデビューアルバム。忙しない毎日を過ごすあなたへ贈る、気軽に楽しめるジャズのスタンダードがここに。
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- メイン -->
-    <main>
-      <!-- ディスコグラフィ -->
-      <section class="discography" id="discography">
-        <div class="section-heading">
-          <h1 class="section-title">DISCOGRAPHY</h1>
+    <!-- バイオグラフィ -->
+    <section class="biography" id="biography">
+      <div class="section-heading">
+        <h1 class="section-title">BIOGRAPHY</h1>
+      </div>
+
+      <div class="container">
+        <div class="biography-item">
+          <div class="bio-wrapper">
+            <h3 class="bio-artist-title">Solo Works</h3>
+            <img src="images/solo.jpg" alt="solo works">
+          </div>
+
+          <p class="item-description"> 東京都出身。4歳からクラシックピアノを始める。高校時代よりジャズに目覚め、大学時代から本格的にジャズクラブに出演。バンド形式では六本木PitInn、新宿Pit
+            Inn、渋谷セルリアンタワーJZ Brat、市川りぶる、立川Halftone、上野EverySwingなど、ソロではrit bar、pearl bar,dance、ばがぽんどetc..
+            都内のジャズクラブを中心にライブ活動を展開。 </p>
+          <p class="item-description">
+            【提供したCM曲】<br>
+            マニュライフセンチュリー生命 TVCM、アウディ Radio CM(オリジナル曲提供・演奏)、ダイキン Radio CM
+          </p>
+          <p class="item-description">
+            【アルバム参加】<br>
+            旧積壮「furuhashi」 (Studio Wee)
+          </p>
         </div>
-      
-        <div class="container">
-          <div class="discography-item">
-            <h2 class="disco-artist-title">”清水雅人GROUP”名義</h2>
-            <div class="disco-artist-description">
-              <p class="disco-artist-description">
-              アルバムアートワークは大瀧詠一、角松敏生、松岡直也、熱帯JAZZ楽団 etc...<br class="new-line">数多くのジャケットを手がける "河田久雄氏"が担当。</p>
-              <p class="disco-artist-description">
-              テレビ・ラジオのCM音楽や都内のライブハウスで活躍する清水雅人(p)、杉田雅彦(g)、東千尋(ds)、瀬戸尚幸（el-b）が<br class="new-line">フュージョンミュージックの可能性を切り拓く!!</p>
-            </div>
 
-            <div class="disco-wrapper">
-              <div class="jacket">
-                <div data-aos="zoom-out">
-                  <a href="https://amzn.asia/d/08Zn4UEN"><img class="jacket-img" src="images/sincerely.jpg" alt="sincerely"></a>
-                </div>
-              </div>
-
-              <div class="disco-pc-design">
-                <div class="disco-item-name">
-                  <h1 class="disco-item-title">1st Album"Sincerely"</h1>
-                  <h1 class="disco-item-release">―2012.11.7 Released</h1>
-                </div>
-              </div>           
-            </div>
-
-            <div class="spotify">
-              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2sDs2aMcVWxtIjPZ0h7Axv?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-
-            <p class="item-description">
-              1. 夜のカフェ<br>
-              electric guitarの力強いストロークで始まるRock Tune!
-            </p>
-            <p class="item-description">
-              2. ハバナ・コネクション<br>
-              ハバナの長距離列車がキューバの熱い風を受けて疾走する!melodiousなel-bassソロに注目!
-            </p>
-            <p class="item-description">
-              3. Remember<br>
-              アメリカの田園風景と青い空…。爽やかなそよ風を感じて。
-            </p>
-            <p class="item-description">
-              4. 青い空の誘惑<br>
-              夏の青い空をイメージした夏全開の曲。リゾートの海の音、浜辺、椰子の木…。突き抜けるようなhandclapにも注目!
-            </p>
-            <p class="item-description">
-              5. Sincerely<br>
-              深夜11時…空いている高速道路から見渡す星のような都会の灯り…。アルバム唯一のジャズワルツ。オリジナル曲のなかで最も古い曲のひとつ。
-            </p>
-            <p class="item-description">
-              6. 約束<br>
-              ブルージーなジャズロック。emotionalなguitarと力強いpianoソロに注目。
-            </p>
-            <p class="item-description">
-              7. Find Out<br>
-              最後の曲はアコースティックなラテンフュージョン!終盤のドラムソロは圧巻!
-            </p>
-            <p class="item-description">
-            All Songs Composed and Produced<br>by Masato Shimizu.
-            </p>
+        <div class="biography-item">
+          <div class="bio-wrapper bio-wrapper-reverse">
+            <h3 class="bio-artist-title">Shimizu Masato Group</h3>
+            <img class="bio-img-reverse" src="images/group.jpg" height="220px" alt="shimizu masato group">
           </div>
-          
-          <div class="discography-item">
-            <div class="disco-wrapper disco-wrapper-reverse">
-              <div class="jacket">
-                <div data-aos="zoom-out">
-                  <a href="https://amzn.asia/d/0dCvsu1N"><img class="jacket-img" src="images/daydream.jpg" alt="daydream"></a>
-                </div>
-              </div>
 
-              <div class="disco-pc-design">
-                <div class="disco-item-name disco-item-name-reverse">
-                  <h1 class="disco-item-title">2nd Album "Daydream"</h1>
-                  <h1 class="disco-item-release">―2018.6.25 Released</h1>
-                </div>
-              </div>
-            </div>
-            
-            <p class="item-description">
-              1. フィラデルフィア・フィーリング<br>
-              フィラデルフィア・ソウルに着想を得たポップ・フュージョン。
-            </p>
-            <p class="item-description">
-              2. めくるめく白昼夢<br>
-              P・K・ディックのSF小説の世界観を表現。霧雨の降る夜のスラム街、 アンドロイドを追うデッカード！圧巻のドラムソロをご堪能あれ。
-            </p>
-            <p class="item-description">
-              3. Never Say It<br>
-              1994年六本木Pit Inn 出演時に初演。何度となく演奏してきた思い出深い曲。<br>
-              Dedicatd to Mr. Yukio Kodaira.
-            </p>
-            <p class="item-description">
-              4. みずいろの街<br>
-              80年代のシティポップをイメージ。降りしきる雨の中、車はスピードを上げる･･･
-            </p>
-            <p class="item-description">
-              5. 9番目の真実<br>
-              ダンサブルなラテンフュージョン!
-            </p>
-            <p class="item-description">
-              6. 東京、午前3時<br>
-              夜の都会、寝静まったTOKYO CITY。
-            </p>
-            <p class="item-description">
-              7. Tropical Wind<br>
-              杉田・清水共作。杉田は沖縄三線、清水はアコーディオンで盛り上げる!<br>
-              夏全開!海、熱帯風を感じて･･･。
-            </p>
-            <p class="item-description">
-              8. Black-Neon<br>
-              元々アルゼンチンタンゴ×フリージャズの曲だったが、本作でフュージョンVer.にリアレンジ。
-            </p>
-            <p class="item-description">
-              9. 運命の1秒<br>
-              Electric Guitarを大フィーチャー!
-            </p>
-            <p class="item-description">
-              All Songs Composed and Produced<br>by Masato Shimizu.
-            </p>
-          </div>
-          
-          <div class="discography-item">
-            <div class="disco-wrapper">
-              <div class="jacket">
-                <div data-aos="zoom-out">
-                  <a href="https://amazon.co.jp/music/player/albums/B0B87H4MN6?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_B5tbNbULVkPcvwfyxmHYRFHgB"><img class="jacket-img" src="images/akinohi.jpg" alt="秋の日は釣瓶落とし"></a>
-                </div>
-              </div>
-
-              <div class="disco-pc-design">
-                <div class="disco-item-name">
-                  <h1 class="disco-item-title">Digital single<br>"秋の日は釣瓶落とし"</h1>
-                  <h1 class="disco-item-release">―2022.8.8 Released</h1>
-                </div>
-              </div>
-            </div>
-
-            <div class="spotify">
-              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/33ltMOIFtlEKWns4v3QLL4?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-            
-            <p class="item-description">
-              待望の新曲! 作曲は、都内のジャズクラブやCM音楽で活躍するジャズピアニスト清水雅人! この曲で初めて、アコーディオンを使用し、秋の夕暮れの風景を表現した。
-            </p>
-          </div>
-          
-          <div class="discography-item">
-            <h2 class="disco-artist-title">“清水雅人 & 杉田雅彦”名義</h2>
-
-            <div class="disco-wrapper disco-wrapper-reverse">
-              <div class="jacket">
-                <div data-aos="zoom-out">
-                  <a href="https://amazon.co.jp/music/player/albums/B0D25R76MB?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_fERLusyltveDTsl25sXP7vzl5"><img class="jacket-img" src="images/star.jpg" alt="流星群"></a>
-                </div>
-              </div>
-
-              <div class="disco-pc-design">
-                <div class="disco-item-name disco-item-name-reverse">
-                  <h1 class="disco-item-title">Digital single"流星群”</h1>
-                  <h1 class="disco-item-release">―2024.4.27 Released.</h1>
-                </div>
-              </div>
-            </div>
-
-            <div class="spotify">
-              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1CKzJomRdwGRfgCPLchMbM?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-            
-            <p class="item-description">
-              名門・六本木ピットイン等に出演し、1990年代、ジャパニーズフュージョンシーンに躍り出た清水雅人(p)が、2024年、自身のグループとは別名義で活動を展開。盟友:杉田雅彦(g)と、新たなフュージョンの世界を展開する!
-            </p>
-          </div>
-          
-          <div class="discography-item">
-            <h2 class="disco-artist-title">"For People's Fun"名義</h2>
-
-            <div class="disco-wrapper">
-              <div class="jacket">
-                <div data-aos="zoom-out">
-                  <a href="https://amzn.asia/d/0cTj2GF8" alt="Gifts in the Life"><img class="jacket-img" src="images/gifts_in_the_life.jpg"></a>
-                </div>
-              </div>
-
-              <div class="disco-pc-design">
-                <div class="disco-item-name">
-                  <h1 class="disco-item-title">1st Album<br>"Gifts in the Life"</h1>
-                  <h1 class="disco-item-release">―2021.3.26 Released.</h1>
-                </div>
-              </div>
-            </div>
-
-            <p class="item-description">
-              1. Satin doll<br>
-              2. Skating in Central Park<br>
-              3. Invitation<br>
-              4. Wave<br>
-              5. It's a dance<br>
-              6. Two for the road<br>
-              7. らいおんハート<br>
-              8. Old folks
-            </p>
-
-            <p class="item-description">
-              清水雅人(piano,keyboard)、三浦大(guitar)の2人で贈る、カフェミュージックの「For People's Fun」のデビューアルバム。忙しない毎日を過ごすあなたへ贈る、気軽に楽しめるジャズのスタンダードがここに。
-            </p>
-          </div>
-        </div>     
-      </section>
-
-      <!-- バイオグラフィ -->
-      <section class="biography" id="biography">
-        <div class="section-heading">
-          <h1 class="section-title">BIOGRAPHY</h1>
+          <p class="item-description">
+            1993年～沼田浩一GROUPとして、ジャズ・フュージョンの殿堂六本木PIT INNに出演し、プロミュージシャンとしてのスタートを切る。六本木PIT INNではフュージョンを、新宿PIT
+            INNではフリージャズの演奏を展開。
+          </p>
+          <p class="item-description">
+            2009年から上野のジャズクラブEvery
+            Swingのセッションでよく顔を合わせていたベーシスト小平幸雄氏に新バンド清水雅人GROUPの構想を持ち掛けたところ、快諾。渡辺貞夫、渡辺香津美、本多俊之などのバンドで日本フュージョンの全盛期を支えてきた名ベーシスト小平氏から多くのことを学ぶ。
+          </p>
+          <p class="item-description">
+            2011年9月、清水雅人GROUPとして六本木Lab Recorders スタジオにて録音。
+          </p>
+          <p class="item-description">
+            2012年、清水雅人GROUP・1stアルバム「Sincerely」発売。ジャズ評論家や往年のフュージョンファンから支持を得る。
+          </p>
+          <p class="item-description">
+            2018年、清水雅人GROUP-2ndアルバム「Daydream」発売。
+          </p>
+          <p class="item-description">
+            2022年、清水雅人GROUP・シングル「秋の日は釣瓶落とし」発売。
+          </p>
+          <p class="item-description">
+            2024年、“清水雅人&杉田雅彦名義”で「流星群」発売。
+          </p>
+          <p class="item-description">
+            現在は、長年作り続けているオリジナル曲100曲以上を発表するべく、アルバム、シングル制作を進めている。<br class="new-line">今後も不定期に楽曲を発表予定。
+          </p>
         </div>
-        
-        <div class="container">
-          <div class="biography-item">
-            <div class="bio-wrapper">
-              <h3 class="bio-artist-title">Solo Works</h3>
-              <img src="images/solo.jpg" alt="solo works">              
-            </div>
 
-            <p class="item-description"> 東京都出身。4歳からクラシックピアノを始める。高校時代よりジャズに目覚め、大学時代から本格的にジャズクラブに出演。バンド形式では六本木PitInn、新宿Pit Inn、渋谷セルリアンタワーJZ Brat、市川りぶる、立川Halftone、上野EverySwingなど、ソロではrit bar、pearl bar,dance、ばがぽんどetc.. 都内のジャズクラブを中心にライブ活動を展開。 </p>
-            <p class="item-description">
-              【提供したCM曲】<br>
-              マニュライフセンチュリー生命 TVCM、アウディ Radio CM(オリジナル曲提供・演奏)、ダイキン Radio CM
-            </p>
-            <p class="item-description">
-              【アルバム参加】<br>
-              旧積壮「furuhashi」 (Studio Wee)
-            </p>
+        <div class="biography-item">
+          <div class="bio-wrapper">
+            <h3 class="bio-artist-title">for peoples fun</h3>
+            <img src="images/for_peoples_fun.jpg" alt="for peoples fun">
           </div>
-          
-          <div class="biography-item">
-            <div class="bio-wrapper bio-wrapper-reverse">
-              <h3 class="bio-artist-title">Shimizu Masato Group</h3>
-              <img class="bio-img-reverse" src="images/group.jpg" height="220px" alt="shimizu masato group">
-            </div>
-            
-            <p class="item-description">
-              1993年～沼田浩一GROUPとして、ジャズ・フュージョンの殿堂六本木PIT INNに出演し、プロミュージシャンとしてのスタートを切る。六本木PIT INNではフュージョンを、新宿PIT INNではフリージャズの演奏を展開。
-            </p>
-            <p class="item-description">
-              2009年から上野のジャズクラブEvery Swingのセッションでよく顔を合わせていたベーシスト小平幸雄氏に新バンド清水雅人GROUPの構想を持ち掛けたところ、快諾。渡辺貞夫、渡辺香津美、本多俊之などのバンドで日本フュージョンの全盛期を支えてきた名ベーシスト小平氏から多くのことを学ぶ。
-            </p>
-            <p class="item-description">
-              2011年9月、清水雅人GROUPとして六本木Lab Recorders スタジオにて録音。
-            </p>
-            <p class="item-description">
-              2012年、清水雅人GROUP・1stアルバム「Sincerely」発売。ジャズ評論家や往年のフュージョンファンから支持を得る。
-            </p>
-            <p class="item-description">
-              2018年、清水雅人GROUP-2ndアルバム「Daydream」発売。
-            </p>
-            <p class="item-description">
-              2022年、清水雅人GROUP・シングル「秋の日は釣瓶落とし」発売。
-            </p>
-            <p class="item-description">
-              2024年、“清水雅人&杉田雅彦名義”で「流星群」発売。
-            </p>
-            <p class="item-description">
-              現在は、長年作り続けているオリジナル曲100曲以上を発表するべく、アルバム、シングル制作を進めている。<br class="new-line">今後も不定期に楽曲を発表予定。
-            </p>
-          </div>
-          
-          <div class="biography-item">
-            <div class="bio-wrapper">
-              <h3 class="bio-artist-title">for peoples fun</h3>
-              <img src="images/for_peoples_fun.jpg" alt="for peoples fun">
-            </div>
 
-            <p class="item-description">
-              2017年、三浦大からギターピアノのデュオを誘われ、ライブハウスでの活動を開始。都内ジャズクラブ、各地のイベントなどに精力的に演奏活動を展開。
-            </p>
-            <p class="item-description">
-              2021年、1stアルバム「Gifts in the Life」発売。初回プレスが完売するなど好評を博す。
-            </p>
-            <p class="item-description">
-              現在は、都内ライブハウスを中心に活動中。2022年4月～2023年9月 レインボータウンFM「ミュージック・カフェ」パーソナリティとして活動。ジャズやワールドミュージックの魅力を発信。
-            </p>
-          </div>
+          <p class="item-description">
+            2017年、三浦大からギターピアノのデュオを誘われ、ライブハウスでの活動を開始。都内ジャズクラブ、各地のイベントなどに精力的に演奏活動を展開。
+          </p>
+          <p class="item-description">
+            2021年、1stアルバム「Gifts in the Life」発売。初回プレスが完売するなど好評を博す。
+          </p>
+          <p class="item-description">
+            現在は、都内ライブハウスを中心に活動中。2022年4月～2023年9月 レインボータウンFM「ミュージック・カフェ」パーソナリティとして活動。ジャズやワールドミュージックの魅力を発信。
+          </p>
         </div>
-      </section>
-          
-      <!-- コンタクト -->
-      <section class="contact" id="contact">
-        <div class="section-heading">
-          <h1 class="section-title">CONTACT</h1>
-        </div>
-        
-        <div class="contact-flex">
-          <div class="contact-paragraph">
-            <p class="contact-lead">
-              お問い合わせは、メールアドレス:
-              <a href="mailto:mandkshimizu@yahoo.co.jp">
+      </div>
+    </section>
+
+    <!-- コンタクト -->
+    <section class="contact" id="contact">
+      <div class="section-heading">
+        <h1 class="section-title">CONTACT</h1>
+      </div>
+
+      <div class="contact-flex">
+        <div class="contact-paragraph">
+          <p class="contact-lead">
+            お問い合わせは、メールアドレス:
+            <a href="mailto:mandkshimizu@yahoo.co.jp">
               <span class="contact_link">
                 mandkshimizu@yahoo.co.jp
               </span></a>
-              よりお気軽にお寄せください。
-            </p>
-            <p class="contact-lead">
-              そのほか、清水雅人に関する最新情報は、
-              <a href="https://www.facebook.com/profile.php?id=61562649396065&ref=embed_page" alt="清水雅人の公式facebook">
+            よりお気軽にお寄せください。
+          </p>
+          <p class="contact-lead">
+            そのほか、清水雅人に関する最新情報は、
+            <a href="https://www.facebook.com/profile.php?id=61562649396065&ref=embed_page" alt="清水雅人の公式facebook">
               <span class="contact-link">
                 Facebook
               </span></a>
-              、<br class="new-line">または
-              <a href="https://www.youtube.com/@elegantpeoplemusic" alt="清水雅人の公式YouTubeチャンネル">
+            、<br class="new-line">または
+            <a href="https://www.youtube.com/@elegantpeoplemusic" alt="清水雅人の公式YouTubeチャンネル">
               <span class="contact-link">
-              公式YouTubeチャンネル「elegantpeoplemusic｣
+                公式YouTubeチャンネル「elegantpeoplemusic｣
               </span></a>
-              にて発信しております。<br>
-              こちらもご覧頂けたら幸いです。
-            </p>
-          </div>
-
-          <div class="facebook-wrap">
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61562649396065%26ref%3Dembed_page&tabs=timeline&width=330&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="330" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          </div>
+            にて発信しております。<br>
+            こちらもご覧頂けたら幸いです。
+          </p>
         </div>
-      </section>
-    </main>
-          
-    <!-- フッター -->
-    <footer class="footer">
-      <div class="footer-copyright">
-        <small>©︎2025 Shimizu Masato All Rights Reserved.</small>
+
+        <div class="facebook-wrap">
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61562649396065%26ref%3Dembed_page&tabs=timeline&width=330&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+            width="330" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
       </div>
-    </footer>
-          
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="crossorigin="anonymous"></script>
-    <script src="./js/hamburger.js"></script>
-    <script>
-      $(function(){
-        AOS.init({
-        });
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-copyright">
+      <small>©︎2025 Shimizu Masato All Rights Reserved.</small>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/hamburger.js"></script>
+  <script>
+    $(function () {
+      AOS.init({
       });
-    </script>
-    <script src="js/aos.js" defer></script>
-  </body>
+    });
+  </script>
+  <script src="js/aos.js" defer></script>
+</body>
+
 </html>
