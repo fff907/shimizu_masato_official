@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-/* SP版コーディング
-------------------------------------------------------------*/
-
 /* ベースのスタイル
 ------------------------------------------------------------*/
 
@@ -37,17 +34,6 @@ a {
 
 a:link, a:visited, a:hover, a:active {
   color: #fff;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: bottom;
-}
-
-@media (max-width: 768px) {
-  .new-line {
-    display: none;
-  }
 }
 
 /* 共通のスタイル
@@ -190,7 +176,7 @@ img {
   overflow: hidden;
 }
 
-.cover__video {
+.cover-video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -199,27 +185,6 @@ img {
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: -1;
-}
-
-@media (max-width: 768px) {
-  .cover__video {
-    display: none;
-  }
-  
-  .cover {
-    background-position: left 18% center;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .cover img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
 }
 
 /* メイン
@@ -257,33 +222,19 @@ img {
   font-size: 1.5rem;
   margin: 1.875rem 0 1.5625rem 0;
   text-align: center;
+  white-space: nowrap;
 }
 
 .disco-item-release {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin-bottom: 3.125rem;
-  text-align: end;
+  white-space: nowrap;
 }
 
-.jacket-img,
 .bio-wrapper img {
   width: 100%;  
   height: auto;
   object-fit: cover;
-}
-
-.iframe-wrap {
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-.youtube {
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 
 .facebook-wrap {
@@ -311,10 +262,57 @@ img {
   color: #fff;
 }
 
-/* min-width: 768px  PC版コーディング
+/*  SP版コーディング
 ------------------------------------------------------------*/
 
-@media (min-width: 768px) {
+@media (max-width: 1500px) {
+  .cover-video {
+    display: none;
+  }
+  
+  .cover {
+    background-position: left 18% center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cover img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .disco-artist-title,
+  .disco-wrapper {
+    text-align: center;
+  }
+  
+  .jacket-img {
+    width: 60%;  
+    height: auto;
+    object-fit: cover;
+  }
+
+  .new-line {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .jacket-img {
+    width: 100%;  
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/*  PC版コーディング
+------------------------------------------------------------*/
+
+@media (min-width: 1500px) {
   body {
     font-size: 1.125rem;
     line-height: 2;
@@ -354,9 +352,9 @@ img {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    max-width: 100%;
+    max-width: 90%;
     margin: 2.5rem auto;
-    gap: 8rem;
+    gap: 4rem;
   }
 
   .discography-item {
@@ -379,45 +377,33 @@ img {
   }
 
   .jacket-img {
-    width: 650px;
-    height: 600px;
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
   }
 
+  .jacket-img-pc {
+    width: 800px;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+  }
+  
   .disco-item-name {
-    font-size: 2.2rem;
     position: relative;
     z-index: 2;
     text-shadow: 1px -1px #333;
     margin-left: 40px;
   }
 
-  .disco-item-name-reverse {
-    font-size: 2.2rem;
-    position: relative;
-    z-index: 2;
-    text-shadow: 1px -1px #333;
-    margin-right: 40px;
-  }
-
-  .iframe-wrap {
-    margin: 0;
-    position: absolute;
-    top: 247px;
-    left: 328px;
-  }
-
-  .iframe-wrap-reverse {
-    margin: 0;
-    position: absolute;
-    top: 254px;
-    left: 67px;
-  }
-
   .disco-item-title {
+    font-size: 2.2rem;
     margin: 0;
   }
 
   .disco-item-release {
+    font-size: 1.6rem;
     margin: 0;
     text-align: center;
   }
