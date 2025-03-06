@@ -203,13 +203,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .disco-artist-title {
-  font-size: 1.4rem;
-  margin: 0 auto 1.875rem auto;
-}
-
-.bio-artist-title {
-  text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin: 0 auto 1.875rem auto;
 }
 
@@ -229,6 +223,12 @@ a:link, a:visited, a:hover, a:active {
   font-size: 1.2rem;
   margin-bottom: 3.125rem;
   white-space: nowrap;
+}
+
+.bio-artist-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0 auto 1.875rem auto;
 }
 
 .bio-wrapper img {
@@ -262,14 +262,10 @@ a:link, a:visited, a:hover, a:active {
   color: #fff;
 }
 
-/*  SP版コーディング
+/* レスポンシブデザイン(SP)
 ------------------------------------------------------------*/
 
-@media (max-width: 1500px) {
-  .cover-video {
-    display: none;
-  }
-  
+@media (max-width: 1500px) {  
   .cover {
     background-position: left 18% center;
     background-size: cover;
@@ -301,6 +297,12 @@ a:link, a:visited, a:hover, a:active {
   }
 }
 
+@media (max-width: 1100px) {  
+  .cover-video {
+    display: none;
+  }
+}
+
 @media (max-width: 500px) {
   .jacket-img {
     width: 100%;  
@@ -309,7 +311,7 @@ a:link, a:visited, a:hover, a:active {
   }
 }
 
-/*  PC版コーディング
+/* レスポンシブデザイン(PC)
 ------------------------------------------------------------*/
 
 @media (min-width: 1500px) {
@@ -453,15 +455,6 @@ a:link, a:visited, a:hover, a:active {
     margin-bottom: 2rem;
   }
 
-  .biography img {
-    width: 50%;
-    max-width: 900px;
-    height: auto;
-    object-fit: cover;
-    position: relative;
-    z-index: 1;
-  }
-
   .bio-img-reverse {
     left: 0;
   }
@@ -477,5 +470,65 @@ a:link, a:visited, a:hover, a:active {
   .contact-paragraph {
     text-align: left;
     max-width: 500px;
+  }
+}
+
+@media (min-width: 600px) {
+  .bio-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .bio-wrapper-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .bio-wrapper img,
+  .bio-img-reverse {
+    width: 70%;
+    max-width: 900px;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+
+  .biography-item,
+  .contact-item {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .biography-item {
+    margin-bottom: 5rem;
+  }
+  
+  .bio-artist-title {
+    font-size: 2.2rem;
+    position: absolute;
+    top: 0;
+    left: 575;
+    z-index: 2;
+    text-shadow: 1px -1px #333;
+    margin-bottom: 2rem;
+  }
+
+  .bio-artist-title-reverse {
+    font-size: 2.2rem;
+    position: absolute;
+    top: 0;
+    left: 1000;
+    z-index: 2;
+    text-shadow: 1px -1px #333;
+    margin-bottom: 2rem;
+  }
+
+  .bio-img-reverse {
+    left: 0;
   }
 }
