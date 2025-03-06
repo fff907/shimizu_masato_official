@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shimizu Masato Official Site</title>
   <meta name="description" content="清水雅人の公式サイトです。">
-  <!-- CSS -->
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,8 @@
         h = d.documentElement, t = setTimeout(function () {h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";}, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () {a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try {Typekit.load(config)} catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <!-- リセットCSS -->
+
+  <!-- CSS,リセットCSS -->
   <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <!-- Font Awesome -->
@@ -33,9 +34,17 @@
   <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-180x180.png">
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/aos.css">
+  
+  <!-- GSAPのCDN（CSSより後、他のJSより前） -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
 <body>
+   <!-- ローディング画面 -->
+  <div class="loading">
+    <div class="loading__logo">Loading...</div>
+  </div>
+
   <!-- ヘッダー -->
   <header class="header">
     <div class="header-inner">
@@ -67,6 +76,7 @@
   <!-- カバー -->
   <section class="cover">
     <video class="cover-video" src="images/shimizu_masato_live.mp4" autoplay loop muted playsinline></video>
+    <div class="cover-overlay"></div>
   </section>
 
   <!-- メイン -->
@@ -436,6 +446,7 @@
     });
   </script>
   <script src="js/aos.js" defer></script>
+  <script src="js/gsap-animation.js"></script>
 </body>
 
 </html>
