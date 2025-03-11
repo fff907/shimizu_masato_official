@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shimizu Masato Official Site</title>
   <meta name="description" content="清水雅人の公式サイトです。">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,9 +44,10 @@
 
 <body>
    <!-- ローディング画面 -->
-  <div class="loading">
-    <div class="loading__logo">Loading...</div>
-  </div>
+   <div class="loading">
+    <div class="loading-text">Loading...</div>
+    <div class="loading-bar"></div>
+  </div>  
 
   <!-- ヘッダー -->
   <header class="header">
@@ -446,7 +450,7 @@
     });
   </script>
   <script src="js/aos.js" defer></script>
-  <script src="js/gsap-animation.js"></script>
+  <script src="js/gsap-animation.js?v=123"></script>
 </body>
 
 </html>
