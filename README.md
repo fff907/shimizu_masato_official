@@ -6,7 +6,6 @@
 ## 🎨 使用技術
 - **HTML / CSS / JavaScript / GSAP**
 - **レスポンシブ対応（PC: 動画背景 / SP: 静止画背景）**
-- **GitHub Pagesで公開**
 - **GitHubでバージョン管理**
 
 ## 🚀 ファイル構成
