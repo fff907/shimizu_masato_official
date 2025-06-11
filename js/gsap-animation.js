@@ -6,29 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const coverVideo = document.querySelector(".cover-video");
 
   const textWidth = loadingText.offsetWidth + "px";
-
-  // SPサイズではvideo非表示のため処理を分岐
   const isDesktop = window.innerWidth >= 1100;
-
-  if (!isDesktop) {
-    cover.style.backgroundImage = "url('../images/cover_bg.png')";
-    runAnimation(); // スマホではすぐにアニメーション実行
-  } else {
-    cover.style.backgroundImage = "none";
-
-    // PC時は動画の読み込みを待ってからアニメーション
-    if (coverVideo.readyState >= 3) {
-      // すでに読み込まれている場合
-      runAnimation();
-    } else {
-      coverVideo.addEventListener("canplaythrough", function handler() {
-        coverVideo.removeEventListener("canplaythrough", handler);
-        runAnimation();
-      });
-    }
-  }
+  let animationStarted = false;
 
   function runAnimation() {
+    if (animationStarted) return; // 二重実行防止
+    animationStarted = true;
+
     const tl = gsap.timeline();
 
     tl.to(loadingBar, {
@@ -36,12 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
       duration: 1,
       ease: "power2.inOut"
     })
-
       .to(loading, {
         opacity: 1,
         duration: 0.5
       })
-
       .to(loading, {
         opacity: 0,
         duration: 1,
@@ -51,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
           loading.style.display = "none";
         }
       })
-
       .to(coverVideo, {
         opacity: 1,
         duration: 1,
@@ -64,6 +45,34 @@ document.addEventListener("DOMContentLoaded", function () {
       }, "-=0.5");
   }
 
+  if (!isDesktop) {
+    cover.style.backgroundImage = "url('../images/cover_bg.png')";
+    runAnimation(); // スマホは即実行
+  } else {
+    cover.style.backgroundImage = "none";
+
+    // 動画の読み込み指示
+    coverVideo.load();
+
+    // すでに読み込まれていれば即実行
+    if (coverVideo.readyState >= 3) {
+      runAnimation();
+    } else {
+      coverVideo.addEventListener("canplaythrough", function handler() {
+        coverVideo.removeEventListener("canplaythrough", handler);
+        runAnimation();
+      });
+
+      // 5秒経っても読み込まれなければ強制実行
+      setTimeout(() => {
+        if (!animationStarted) {
+          console.warn("動画の読み込みが遅いため、アニメーションを強制実行します");
+          runAnimation();
+        }
+      }, 5000);
+    }
+  }
+
   // ウィンドウリサイズで背景画像の切替
   window.addEventListener("resize", function () {
     if (window.innerWidth < 1100) {
@@ -73,3 +82,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
