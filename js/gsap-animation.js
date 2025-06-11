@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const loading = document.querySelector(".loading");
   const loadingBar = document.querySelector(".loading-bar");
   const loadingText = document.querySelector(".loading-text");
