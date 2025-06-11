@@ -339,7 +339,7 @@ a:link, a:visited, a:hover, a:active {
   }
 
   .cover {
-    background-image: url(../images/cover_bg.png) !important;
+    background-image: url(../images/cover_bg.jpg) !important;
     background-size: cover;
     background-position: left 18% center;
   }
