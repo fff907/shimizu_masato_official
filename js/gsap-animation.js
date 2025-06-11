@@ -37,6 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
         opacity: 1,
         duration: 1,
         ease: "power2.inOut",
+        onStart: function () {
+          // 明示的に再生を試みる（mutedなので通常は許可される）
+          coverVideo.play().catch((e) => {
+            console.warn("動画の自動再生に失敗しました:", e);
+          });
+        },
         onComplete: function () {
           if (isDesktop) {
             cover.style.backgroundImage = "none";
@@ -82,4 +88,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
