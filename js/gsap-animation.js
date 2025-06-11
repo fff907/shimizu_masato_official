@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let animationStarted = false;
 
   function runAnimation() {
-    if (animationStarted) return; // 二重実行防止
+    if (animationStarted) return;
     animationStarted = true;
 
     const tl = gsap.timeline();
@@ -38,14 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: 1,
         ease: "power2.inOut",
         onStart: function () {
-          // 明示的に再生を試みる（mutedなら自動再生される）
           coverVideo.play().catch((e) => {
             console.warn("動画の自動再生に失敗しました:", e);
           });
         },
+        // opacityが1になった後、0.2秒遅らせて背景を消す
         onComplete: function () {
           if (isDesktop) {
-            cover.style.backgroundImage = "none";
+            setTimeout(() => {
+              cover.style.backgroundImage = "none";
+            }, 200); // 遅延で描画ズレをカバー
           }
         }
       }, "-=0.5");
@@ -53,14 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!isDesktop) {
     cover.style.backgroundImage = "url('../images/cover.jpg')";
-    runAnimation(); // スマホは即実行
+    runAnimation();
   } else {
     cover.style.backgroundImage = "url('../images/cover.jpg')";
-
-    // 動画の読み込み指示
     coverVideo.load();
 
-    // すでに読み込まれていれば即実行
     if (coverVideo.readyState >= 3) {
       runAnimation();
     } else {
@@ -69,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
         runAnimation();
       });
 
-      // 5秒経っても読み込まれなければ強制実行
       setTimeout(() => {
         if (!animationStarted) {
           console.warn("動画の読み込みが遅いため、アニメーションを強制実行します");
@@ -79,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ウィンドウリサイズで背景画像の切替（cover.jpgに統一）
   window.addEventListener("resize", function () {
     if (window.innerWidth < 1100) {
       cover.style.backgroundImage = "url('../images/cover.jpg')";
