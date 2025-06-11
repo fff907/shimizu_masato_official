@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: 1,
         ease: "power2.inOut",
         onStart: function () {
-          // 明示的に再生を試みる（mutedなので通常は許可される）
+          // 明示的に再生を試みる（mutedなら自動再生される）
           coverVideo.play().catch((e) => {
             console.warn("動画の自動再生に失敗しました:", e);
           });
@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (!isDesktop) {
-    cover.style.backgroundImage = "url('../images/cover_bg.png')";
+    cover.style.backgroundImage = "url('../images/cover.jpg')";
     runAnimation(); // スマホは即実行
   } else {
-    cover.style.backgroundImage = "none";
+    cover.style.backgroundImage = "url('../images/cover.jpg')";
 
     // 動画の読み込み指示
     coverVideo.load();
@@ -79,12 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ウィンドウリサイズで背景画像の切替
+  // ウィンドウリサイズで背景画像の切替（cover.jpgに統一）
   window.addEventListener("resize", function () {
     if (window.innerWidth < 1100) {
-      cover.style.backgroundImage = "url('../images/cover_bg.png')";
+      cover.style.backgroundImage = "url('../images/cover.jpg')";
     } else {
-      cover.style.backgroundImage = "none";
+      cover.style.backgroundImage = "url('../images/cover.jpg')";
     }
   });
 });
