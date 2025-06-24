@@ -14,7 +14,7 @@ html {
 body {
   font-family: "biz-udpmincho", sans-serif;
   font-style: normal;
-  font-size: .9375rem;
+  font-size: 0.9375rem;
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1.5;
@@ -68,7 +68,7 @@ a:link, a:visited, a:hover, a:active {
 
 .spotify {
   width: 90%;
-  max-width: 1000px;
+  max-width: 62.5rem;
   margin: 0 auto;
 }
 
@@ -209,8 +209,8 @@ a:link, a:visited, a:hover, a:active {
 .loading-text {
   color: white;
   font-family: sans-serif;
-  font-size: 24px;
-  margin-bottom: 5px;
+  font-size: 1.5rem;
+  margin-bottom: 0.3125rem;
   display: inline-block;
   text-align: center;
   white-space: nowrap;
@@ -280,7 +280,7 @@ a:link, a:visited, a:hover, a:active {
 
 .contact-lead {
   font-size: 1rem;
-  margin: 1.875rem .625rem 2.1875rem .625rem;
+  margin: 1.875rem 0.625rem 2.1875rem 0.625rem;
 }
 
 .contact-link {
@@ -292,8 +292,7 @@ a:link, a:visited, a:hover, a:active {
 
 .footer {
   padding: 2.5rem;
-  font-size: .875rem;
-  /* 14px */
+  font-size: 0.875rem;
   text-align: center;
   color: #fff;
 }
@@ -421,14 +420,14 @@ a:link, a:visited, a:hover, a:active {
   }
 
   .jacket-img {
-    width: 600px;
+    width: ;
     height: auto;
     object-fit: contain;
     max-width: 100%;
   }
 
   .jacket-img-pc {
-    width: 800px;
+    width: 50rem;
     height: auto;
     object-fit: contain;
     max-width: 100%;
@@ -438,7 +437,7 @@ a:link, a:visited, a:hover, a:active {
     position: relative;
     z-index: 2;
     text-shadow: 1px -1px #333;
-    margin-left: 40px;
+    margin-left: 2.5rem;
   }
 
   .disco-item-title {
@@ -511,7 +510,7 @@ a:link, a:visited, a:hover, a:active {
 
   .contact-paragraph {
     text-align: left;
-    max-width: 500px;
+    max-width: 31.25rem;
   }
 }
 
@@ -533,7 +532,7 @@ a:link, a:visited, a:hover, a:active {
   .bio-wrapper img,
   .bio-img-reverse {
     width: 70%;
-    max-width: 900px;
+    max-width: 56.25rem;
     height: auto;
     object-fit: cover;
     position: relative;
