@@ -1,10 +1,34 @@
-$(document).ready(function() {
-	// ハンバーガーメニューボタンのクリックイベント
-	$(".hamburger-button").click(function(event) {
-	$(".sp-nav").slideToggle();
-	});
-	// ナビゲーションリンクのクリックイベント
-	$(".sp-nav-list a").click(function(event) {
-	$(".sp-nav").slideUp();
-	});
-	});
+'use strict';
+
+{
+  // DOM要素の取得
+  const open = document.getElementById('open');
+  const overlay = document.getElementById('overlay');
+  const navLinks = document.querySelectorAll('.nav__list a');
+
+  // メニューを閉じる関数
+  function closeMenu() {
+    overlay.classList.remove('show');
+    open.classList.remove('is-active');
+    document.body.style.overflow = '';
+  }
+
+  // ハンバーガーメニューをクリックしたとき
+  open.addEventListener('click', () => {
+    const isOpen = overlay.classList.toggle('show');
+    open.classList.toggle('is-active');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // メニュー内リンクをクリックしたとき、メニューを閉じる
+  navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // ウィンドウサイズが1000pxを超えたらメニューを閉じる（レスポンシブ対応）
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1000) {
+      closeMenu();
+    }
+  });
+}
