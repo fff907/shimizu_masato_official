@@ -1,7 +1,6 @@
 'use strict';
 
 {
-  // DOM要素の取得
   const open = document.getElementById('open');
   const overlay = document.getElementById('overlay');
   const navLinks = document.querySelectorAll('.nav__list a');
@@ -13,14 +12,14 @@
     document.body.style.overflow = '';
   }
 
-  // ハンバーガーメニューをクリックしたとき
+  // ハンバーガーメニューの開閉
   open.addEventListener('click', () => {
     const isOpen = overlay.classList.toggle('show');
     open.classList.toggle('is-active');
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  // メニュー内リンクをクリックしたとき、メニューを閉じる
+  // メニュー内リンクをクリックした時、メニューを閉じる
   navLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
   });
