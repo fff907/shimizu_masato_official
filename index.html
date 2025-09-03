@@ -50,32 +50,30 @@
   </div>  
 
   <!-- ヘッダー -->
-  <header class="header">
-    <div class="header-inner">
-      <h1 class="header-logo">
-        <a href=".">SHIMIZU MASATO</a>
-      </h1>
-      <div class="hamburger-button"><i class="fas fa-bars" aria-label="menu"></i></div>
+<header class="header">
+  <div class="header-inner">
+    <!-- ロゴ -->
+    <h1 class="header-logo">
+      <a href=".">SHIMIZU MASATO</a>
+    </h1>
 
-      <!-- SPナビゲーション -->
-      <nav class="sp-nav">
-        <ul class="sp-nav-list">
-          <li><a href="#discography">DISCOGRAPHY</a></li>
-          <li><a href="#biography">BIOGRAPHY</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-        </ul>
-      </nav>
+    <!-- ハンバーガーメニュー（三本線ボタン） -->
+    <button class="header__hamburger" id="open">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-      <!-- PCナビゲーション -->
-      <nav class="pc-nav">
-        <ul class="pc-nav-list">
-          <li><a href="#discography">DISCOGRAPHY</a></li>
-          <li><a href="#biography">BIOGRAPHY</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- ナビゲーション（PC/SP共通） -->
+    <nav class="global-nav" id="overlay">
+      <ul class="nav__list">
+        <li><a href="#discography">DISCOGRAPHY</a></li>
+        <li><a href="#biography">BIOGRAPHY</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <!-- カバー -->
   <section class="cover">
