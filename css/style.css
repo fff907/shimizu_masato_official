@@ -104,6 +104,7 @@ a:link, a:visited, a:hover, a:active {
   line-height: 1;
   letter-spacing: 0.05rem;
   text-shadow: 1px -1px #333;
+  white-space: nowrap;
 }
 
 .header-logo a {
@@ -134,7 +135,6 @@ a:link, a:visited, a:hover, a:active {
   transition: transform 0.3s, opacity 0.3s;
 }
 
-/* ×印に変化（SPメニューを開いた時） */
 .header__hamburger.is-active span:nth-child(1) {
   transform: translateY(8.5px) rotate(45deg);
 }
