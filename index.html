@@ -440,14 +440,16 @@
 
   <!-- JS -->
   <script src="./js/hamburger.js"></script>
+  <script src="./js/aos.js" defer></script>
   <script>
-    $(function () {
-      AOS.init({
-      });
-    });
+     'use strict';
+      {
+        document.addEventListener('DOMContentLoaded', () => {
+          AOS.init();
+        });
+      }
   </script>
-  <script src="js/aos.js" defer></script>
-  <script src="js/gsap-animation.js?v=123"></script>
+  <script src="./js/gsap-animation.js?v=123"></script>
 </body>
 
 </html>
